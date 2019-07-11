@@ -4,10 +4,12 @@ namespace ec\DB;
 
 class Sql {
 
-	const HOSTNAME = "127.0.0.1";
-	const USERNAME = "root";
-	const PASSWORD = "";
-	const DBNAME = "db_ecommerce";
+	const HOSTNAME      = "127.0.0.1";
+	const USERNAME      = "root";
+	const PASSWORD      = "";
+	const DBNAME        = "db_ecommerce";
+	const DB_CONNECTION = "mysql";
+	const DB_PORT       = "3306" 
 
 	private $conn;
 
@@ -15,7 +17,7 @@ class Sql {
 	{
 
 		$this->conn = new \PDO(
-			"mysql:dbname=".Sql::DBNAME.";charset=utf8;host=".Sql::HOSTNAME, 
+			Sql::DBDRIVER.":dbname=".Sql::DBNAME.";charset=utf8;host=".Sql::HOSTNAME.';'.Sql::DB_PORT, 
 			Sql::USERNAME,
 			Sql::PASSWORD,
 			[\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]
