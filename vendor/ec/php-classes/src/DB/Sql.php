@@ -9,7 +9,7 @@ class Sql {
 	const PASSWORD      = "";
 	const DBNAME        = "db_ecommerce";
 	const DB_CONNECTION = "mysql";
-	const DB_PORT       = "3306" 
+	const DB_PORT       = "3306"; 
 
 	private $conn;
 
