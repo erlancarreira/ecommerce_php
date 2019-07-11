@@ -17,7 +17,7 @@ class Sql {
 	{
 
 		$this->conn = new \PDO(
-			Sql::DBDRIVER.":dbname=".Sql::DBNAME.";charset=utf8;host=".Sql::HOSTNAME.';'.Sql::DB_PORT, 
+			Sql::DB_CONNECTION.":dbname=".Sql::DBNAME.";charset=utf8;host=".Sql::HOSTNAME.';'.Sql::DB_PORT, 
 			Sql::USERNAME,
 			Sql::PASSWORD,
 			[\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]
